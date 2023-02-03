@@ -1,0 +1,6 @@
+
+
+
+The remove duplicates method checks if the tracker hashmap contains the key in the map,
+however the hashcode method is not overriden which is used to set key of an object in a map, hence it uses a generated
+hashmap which would be different everytime even if the price and emplyee names are equal

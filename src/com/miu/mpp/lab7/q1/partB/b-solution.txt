@@ -1,0 +1,2 @@
+The equals method in the employee class uses a different method signature which is different from the default's Objects method,
+hence the contains class uses the original Object's impl of equals method which compares the objects instead of our own equal impl
