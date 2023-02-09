@@ -16,7 +16,12 @@ public class MainFrame extends JFrame {
 		JButton cdButton = new JButton("Go to CD Window");
 		cdButton.addActionListener(new CDWindowListener());
 		JButton bookButton = new JButton("Go to Book Window");
-		bookButton.addActionListener(new BookWindowListener());
+		bookButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+			}
+		});
 		mainPanel.add(cdButton);
 		mainPanel.add(bookButton);
 		getContentPane().add(mainPanel);

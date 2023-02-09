@@ -3,6 +3,7 @@ package com.miu.mpp.lab9.partii.q11.a;
 import com.miu.mpp.lab9.partii.q11.b.LambdaLibrary;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -31,6 +32,32 @@ public class Main {
         System.out.println(strVal);
 
 
+        System.out.println(Optional.of(23).flatMap(x ->
+                Optional.ofNullable(null)).orElseGet(() -> "none"));
+        Optional.of(23).flatMap(x ->
+                Optional.ofNullable(46)).ifPresent(System.out::println);
+
+
+        Stream<String> stringStream = Stream.of("1", "2", "40", "10");
+
+        System.out.println(stringStream.map(Integer::parseInt).reduce((x, y)-> getLarget(x,y)).get());;
+
+        List<Integer> us = new ArrayList<>();
+//        List<Number> uo = us;
+
+
+
     }
+
+    private static Integer getLarget(Integer x, Integer y) {
+
+        System.out.println("x "+x);
+        System.out.println("y "+y);
+        if (x > y) {
+            return x;
+        }
+        return y;
+    }
+
 
 }

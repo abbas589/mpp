@@ -18,6 +18,7 @@ public class LambdaLibrary {
             emps.stream()
                     .filter(v -> v.getSalary() > maxSal)
                     .filter(e->characterList.stream().anyMatch(v->e.getLastName().startsWith(v+"")))
+                    .distinct()
                     .sorted(Comparator.comparing(Employee::getFirstName).thenComparing(Employee::getLastName))
                     .map(v -> v.getFirstName() + " " + v.getLastName())
                     .collect(Collectors.joining(", "));

@@ -20,7 +20,12 @@ public class Problem1 {
 
     public static Comparator<Customer> sortedCustomer = Comparator.comparing((Customer::getLastName));
     public static Function<Account,Customer> accountCustomerFunction = Account::getCustomer;
-    public static Predicate<Account> greaterThanFifty = (a)->a.getBalance() > 50;
+    public static Predicate<Account> greaterThanFifty = new Predicate<Account>() {
+        @Override
+        public boolean test(Account account) {
+           return account.getBalance() > 340;
+        }
+    };
 
 
     String[] money = new String[5];

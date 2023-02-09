@@ -13,7 +13,7 @@ public class ArrayChecker {
 
         String[] strings = new String[5];
 
-        Arrays.stream(strings).filter(vv-> vv.equals());
+//        Arrays.stream(strings).filter(vv-> vv.equals());
 
         Stream.of(strings);
 

@@ -16,7 +16,6 @@ public class Biii {
     }
 
     public static class SupplierClass implements Supplier<Double> {
-
         @Override
         public Double get() {
             return Math.random();

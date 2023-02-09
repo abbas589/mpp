@@ -50,9 +50,19 @@ public class Employee {
 		Function<Employee,String> nameComparator = Employee::getName;
 		Function<Employee,Integer> salCompare = Employee::getSalary;
 
+//		Comparator<Employee> employeeComparator = tr -> tr.getName();
+
 		System.out.println(list.stream()
 				.sorted(Comparator.comparing(Employee::getName)
 						.thenComparing(Comparator.comparing(Employee::getSalary).reversed())).collect(Collectors.toList()));
+
+		List<? extends Number> n = new ArrayList<>();
+//		List<? extends Integer> check = n;
+
+
+	}
+	public void checker(){
+		(Employee v) -> this.equals(v);
 	}
 }
 
